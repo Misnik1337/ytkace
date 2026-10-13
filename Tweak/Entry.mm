@@ -25,6 +25,7 @@ static void YTKACEInstallModules(void) {
     YTKACEInstallBackgroundPlaybackHooks();
     YTKACEInstallSpeedHooks();
     YTKACEInstallLoopHooks();
+    YTKACEInstallTranslationHooks();
     YTKACEInstallAutoplayHooks();
     YTKACEInstallCaptionHooks();
     YTKACEInstallTranscriptHooks();

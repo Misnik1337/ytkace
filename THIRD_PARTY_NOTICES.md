@@ -44,6 +44,10 @@ The Liquid Glass tab bar and top bar in `Tweak/Features/Navigation/TabBarHooks.m
 
 The tab bar selection lens uses UIKit's private `_UILiquidLensView`. How to create and drive it was learned from [Livsy90/LiquidLens](https://github.com/Livsy90/LiquidLens), a research demo released under the MIT licence. No code from that project is included.
 
+## voice-over-translation and vot.js
+
+Voice-over translation (`Tweak/Features/Translation/`) talks to Yandex's browser video translation API, an unofficial and undocumented service. The protocol — protobuf messages, request signing, session handling, the chunked audio upload and the live-voice flag — was ported to Objective-C from [FOSWLY/vot.js](https://github.com/FOSWLY/vot.js) (MIT License, Copyright (c) 2024 FOSWLY), and the user-facing behaviour follows [ilyhalight/voice-over-translation](https://github.com/ilyhalight/voice-over-translation) (MIT License, Copyright (c) 2021 sodapng, Copyright (c) 2022-present ilyhalight). The signing key, client version and user agent in `VOTClient.mm` are copied from vot.js `packages/shared/src/data/config.ts`. The Yandex account sign-in uses voice-over-translation's OAuth client and auth page; the token is read from the callback URL fragment on the device and never sent to that server. `Tests/data/vot_vectors.txt` was generated with vot.js. Translations are provided by Yandex and are subject to Yandex's terms.
+
 ## Apple frameworks
 
 YTKACE uses UIKit, AVFoundation and SF Symbols supplied by iOS. SF Symbols artwork is requested at runtime and is not included as a redistributed asset pack.

@@ -53,6 +53,11 @@ YTKACE_FILES = \
 	Tweak/Features/Playback/DoubleTapHooks.mm \
 	Tweak/Features/Playback/VideoZoom.mm \
 	Tweak/Features/Playback/ProgressBarStyle.mm \
+	Tweak/Features/Translation/VOTProto.m \
+	Tweak/Features/Translation/VOTClient.mm \
+	Tweak/Features/Translation/TranslationControls.mm \
+	Tweak/Features/Translation/TranslationPanel.mm \
+	Tweak/Features/Translation/YandexAccount.mm \
 	Tweak/Features/Streaming/StreamingHooks.mm \
 	Tweak/Features/Streaming/TVClient.mm \
 	Tweak/Features/Streaming/HLSPlayback.mm \
@@ -96,7 +101,7 @@ YTKACE_CFLAGS += -DYTKACE_VERSION_STRING=\"$(shell awk '/^Version:/ {print $$2}'
 YTKACE_CFLAGS += -Wno-module-import-in-extern-c
 YTKACE_CFLAGS += -I$(THEOS_PROJECT_DIR)/Vendor/FFmpeg/include
 YTKACE_CCFLAGS = -std=c++17
-YTKACE_FRAMEWORKS = Foundation UIKit JavaScriptCore AVFoundation AVKit AudioToolbox Photos QuartzCore MediaPlayer Security SystemConfiguration UniformTypeIdentifiers VideoToolbox CoreMedia
+YTKACE_FRAMEWORKS = Foundation UIKit WebKit JavaScriptCore AVFoundation AVKit AudioToolbox Photos QuartzCore MediaPlayer Security SystemConfiguration UniformTypeIdentifiers VideoToolbox CoreMedia
 YTKACE_LIBRARIES = z
 YTKACE_LDFLAGS = -Wl,-install_name,@rpath/YTKACE.dylib
 YTKACE_LDFLAGS += $(THEOS_PROJECT_DIR)/Vendor/FFmpeg/lib/libavformat.a

@@ -1548,6 +1548,17 @@ static NSDictionary *YTKACEPlayerDefinition(void) {
          YTKACELocalized(@"HIDE FROM PLAYER"), YTKACELocalized(@"PROGRESS BAR")]);
 }
 
+static NSDictionary *YTKACETranslationDefinition(void) {
+    return YTKACEPageDefinition(@"translation", @"Voice-over Translation", @[
+        @[
+            YTKACEToggleDetail(@"Voice-over Translation",
+                @"Adds a translate button to the player. Hold the button for language, "
+                @"live voices and volume.",
+                YTKACETranslationKey)
+        ]
+    ], @[YTKACELocalized(@"MAIN")]);
+}
+
 static NSDictionary *YTKACEQualityDefinition(void) {
     NSArray *qualities = @[@"Auto", @"2160p60", @"2160p", @"1440p60", @"1440p",
                            @"1080p60", @"1080p", @"720p60", @"720p", @"480p",
@@ -1959,7 +1970,8 @@ NSArray<NSDictionary *> *YTKACESettingsMenu(void) {
             @{@"id": @"quality", @"title": @"Video Quality", @"detail": @"Default quality on Wi-Fi and mobile data", @"symbol": @"sparkles.tv"},
             @{@"id": @"captions", @"title": @"Captions", @"detail": @"Captions on or off, language, and transcript", @"symbol": @"captions.bubble"},
             @{@"id": @"gestures", @"title": @"Gestures", @"detail": @"Brightness, volume, double tap, and seeking", @"symbol": @"hand.draw"},
-            @{@"id": @"sponsorblock", @"title": @"SponsorBlock", @"detail": @"Skip or mark sponsored segments", @"symbol": @"sponsor"}
+            @{@"id": @"sponsorblock", @"title": @"SponsorBlock", @"detail": @"Skip or mark sponsored segments", @"symbol": @"sponsor"},
+            @{@"id": @"translation", @"title": @"Voice-over Translation", @"detail": @"Yandex dubbing with live voices", @"symbol": @"translate"}
         ]},
         @{@"header": @"LOOK & LAYOUT", @"rows": look},
         @{@"header": @"APP", @"rows": @[
@@ -1971,6 +1983,7 @@ NSArray<NSDictionary *> *YTKACESettingsMenu(void) {
 
 static NSDictionary *YTKACEDefinitionForPage(NSString *pageID) {
     if ([pageID isEqualToString:@"sponsorblock"]) return YTKACESponsorBlockDefinition();
+    if ([pageID isEqualToString:@"translation"]) return YTKACETranslationDefinition();
     if ([pageID isEqualToString:@"player"]) return YTKACEPlayerDefinition();
     if ([pageID isEqualToString:@"quality"]) return YTKACEQualityDefinition();
     if ([pageID isEqualToString:@"captions"]) return YTKACECaptionsDefinition();

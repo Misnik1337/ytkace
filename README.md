@@ -10,6 +10,7 @@ An open-source YouTube enhancement for iOS.
 | Queue | Play next or play last without Premium, with reorder, swipe to remove, shuffle, loop and clear |
 | Playback | Background playback, PiP, loop, speed controls, default speed, gestures, tap to seek and an HLS playback mode |
 | SponsorBlock | Category controls, progress markers, skip modes and configurable alerts |
+| Translation | Voice-over translation by Yandex (port of [voice-over-translation](https://github.com/ilyhalight/voice-over-translation) / [vot.js](https://github.com/FOSWLY/vot.js)): player button, live voices, Russian/English/Kazakh, original and translation volume sliders, local cache of dubbed tracks |
 | Interface | OLED mode, overlay controls, navigation cleanup and native share sheets |
 | Liquid Glass | Glass tab bar, top bar buttons, menus, sheets, player buttons and YTKACE popups on iOS 26, with shrink on scroll and a selected tab color |
 | Tabs | Hide, reorder and add YouTube destinations |

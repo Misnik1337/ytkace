@@ -14,6 +14,12 @@ NSString * const YTKACEPiPKey = @"YTKACE.Preference.Player.PiP";
 NSString * const YTKACESpeedKey = @"YTKACE.Preference.Player.SpeedControls";
 NSString * const YTKACELoopKey = @"YTKACE.Preference.Player.Loop";
 NSString * const YTKACESleepTimerKey = @"YTKACE.Preference.Player.SleepTimer";
+NSString * const YTKACETranslationKey = @"YTKACE.Preference.Player.Translation";
+NSString * const YTKACETranslationLanguageKey = @"YTKACE.Preference.Translation.Language";
+NSString * const YTKACETranslationOriginalVolumeKey =
+    @"YTKACE.Preference.Translation.OriginalVolume";
+NSString * const YTKACETranslationVolumeKey = @"YTKACE.Preference.Translation.Volume";
+NSString * const YTKACETranslationLivelyVoiceKey = @"YTKACE.Preference.Translation.LivelyVoice";
 NSString * const YTKACEPreferencesDidChangeNotification =
     @"YTKACEPreferencesDidChangeNotification";
 
@@ -61,6 +67,11 @@ void YTKACERegisterDefaults(void) {
         YTKACEPiPKey: @NO,
         YTKACESpeedKey: @NO,
         YTKACELoopKey: @NO,
+        YTKACETranslationKey: @NO,
+        YTKACETranslationLanguageKey: @"ru",
+        YTKACETranslationOriginalVolumeKey: @15.0,
+        YTKACETranslationVolumeKey: @100.0,
+        YTKACETranslationLivelyVoiceKey: @YES,
         @"YTKACE.Preference.Playback.CustomDoubleTap": @NO,
         @"YTKACE.Preference.Playback.TapToSeek": @NO,
         @"YTKACE.Preference.Sharing.NativeSheet": @NO,

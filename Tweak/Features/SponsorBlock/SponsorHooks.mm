@@ -42,6 +42,7 @@ static void YTKACERefreshPlaybackTimePreferenceState(void) {
         YTKACEFeatureEnabled(@"autoSkipShorts") ||
         YTKACEFeatureEnabled(YTKACESpeedKey) ||
         YTKACEFeatureEnabled(YTKACESleepTimerKey) ||
+        YTKACEFeatureEnabled(YTKACETranslationKey) ||
         YTKACEFeatureEnabled(@"YTKACE.Preference.Playback.LocalQueue");
 }
 
